@@ -107,7 +107,7 @@ Once you have written unit integration tests for whatever feature you wanted to 
    chmod +x e2e.sh
    ./e2e.sh
    ```
-   The setup will be very similar to the developer one; however, you will notice that only one VSCode window will open. This is the end-to-end testing window.
+The setup will be quite similar to the developer environment, with a key difference: only one VSCode window will open, dedicated to end-to-end testing. Unlike the developer setup, the frontend and backend are not running in dev containers but are instead running with `npm run dev` and `npm start`, respectively. Additionally, the environment variables have been adjusted, particularly those directing the frontend to the backend. This adjustment is necessary because Docker Compose handles hostnames for containers internally, making the use of `localhost` unsuitable.
 
 2. Follow the instructions in [Frontend Setup Instructions](#frontend-setup-instructions) and [Backend Setup Instructions](#backend-setup-instructions) to complete the setup for the end-to-end testing environment.
 
