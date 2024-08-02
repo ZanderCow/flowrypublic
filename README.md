@@ -46,7 +46,7 @@ This section gives you a overview of my workflow for developing the app.
 - Refer to the UI mockup in Figma for the app and design your new feature. Ensure it follows the same color scheme as the rest of the app and scales appropriately on various devices (follow the setup in other parts of the app).
 - Convert the UI mockup components into `React/Next.js` and `CSS` code.
 - If you are creating new components, write unit tests for them. Ensure they render correctly on the page and that their features work properly.
-- Write integration tests for your new features. Mock the connection to the backend if your feature involves backend interactions, and use placeholder data for testing. Currently, you don't need to worry about edge cases involving form submissions, as the backend handles those. However, this document may be updated in the future to include handling excessive error cases on the backend to avoid high API call costs.
+- Write integration tests for your new features. Mock the connection to the backend if your feature involves backend interactions, and use placeholder data for testing. Currently, you don't need to worry about edge cases involving form submissions, as the backend handles those. However, this document may be updated in the future to include handling excessive error cases on the frontend to avoid high API call costs.
 - Run your tests to ensure they work correctly.
 
 ### 4. End-to-End (e2e) Testing
@@ -72,7 +72,8 @@ This section gives you a overview of my workflow for developing the app.
 ### 7. Make a Version Tag and deploy
 
 - Once you have enough features that satisfy a quality update, make a new version tag.
-- When it's made, GitHub Actions will automatically run the `docker-compose.test.yml` to ensure everything still works, then it will use a Terraform script to set up production-ready code and deploy it. 
+- When it's made, GitHub Actions will automatically run the `docker-compose.test.yml` to ensure everything still works, then it will use a Terraform script to set up production-ready code and deploy it.
+- I am considering setting up a staging environment, that replicates the production-ready one.
 
 
 ## Automated Developer Environment Setup
